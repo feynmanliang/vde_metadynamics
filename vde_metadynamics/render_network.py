@@ -50,7 +50,7 @@ def render_fc_layer(layer_indx, lp):
         try:
             bias =','.join(map(str,lp.bias[i].data.tolist()))
         except TypeError:
-            bias = str(lb.bias[i].data.tolist())
+            bias = str(lp.bias[i].data.tolist())
 
         # combine without bias
         non_bias_label = "l%d_%dnb"%(layer_indx, i)
